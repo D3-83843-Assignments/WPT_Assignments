@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Registration form</title>
+    </head>
+    <style>
+        h1{
+            text-align: center;
+        }
+        tr,td{
+            width: 50%;
+            padding: 5px;
+            font-size: larger;
+           
+        }
+
+        table
+        {
+            padding: 5px;
+            font-size: large;
+            width: 80%;
+            height: 500px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        button,input
+        {
+            font-size: large; justify-self: center;
+        }
+    </style>
+<body>
+    <h1><u>Registration form</u></h1>
+
+    <form action="register.jsp">
+    <table>
+        <tr>
+            <td rowspan="10">
+                <video width=100% height="500px" controls>
+                    <source src="Video.mp4" type="video/mp4">
+                    Your browser does not support this video.
+                </video>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Name <input type="text" name="Name" placeholder="Enter name ">*
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Birth date <input type="date" placeholder="dd/mm/yyyy">*
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email <input type="email" placeholder="abc@gmail.com" required="@">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password <input type="password" placeholder="**********">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Address 
+                <select >
+                    State
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select>
+                <select>
+                    <option value="Pune">Pune</option>
+                    <option value="Amravati">Amravati</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Satara">Satara</option>
+                </select>
+                <select>
+                    <option value="PUne">Pune</option>
+                    <option value="Satara">Satara</option>
+                    <option value="Thane">Thane</option> 
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gender 
+                <input type="radio" name="gender" id="F">Female
+                <input type="radio" name="gender" id="M">Male 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Upload photo 
+                <input placeholder="Browse your photo">
+                <input type="file">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Select your course
+                <select name="Course">
+                    <option value="CDAC">PG-DAC</option>
+                    <option value="DMC">PG-DMC</option>
+                    <option value="DBDA">PG-DBDA</option>
+                    <option value="DITISS">PG-DITISS</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <button type="submit">Register</button>
+                <button type="reset">Clear</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
