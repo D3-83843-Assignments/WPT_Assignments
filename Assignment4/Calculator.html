@@ -1,0 +1,222 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        table,tr,td
+        {
+            width: 50%;
+            font-size: large;
+            padding: 5px;
+            align-items: center;
+        }
+        input
+        {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="4"><center><h1>Calculator</h1></center></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Number 1:
+                    </td>
+                    <td  colspan="2">
+                        <input type="text" id="txtNum1">
+                    </td>
+                    <td colspan="1">
+                        <div id="errorMessageNum1" style="color: red;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Number 2:
+                    </td>
+                    <td  colspan="2">
+                        <input type="text" id="txtNum2">
+                    </td>
+                    <td colspan="1">
+                        <div id="errorMessageNum2" style="color: red;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td
+                        <h4>Result:</h4>
+                    </td>
+                    <td colspan="2">
+                        <div id="ResultDiv" style="border: 1px solid black; width: 200px; height: 50px; text-align: center;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Add" onclick="Add()">
+                    </td>
+                    <td>
+                        <input type="button" value="Subtract" onclick="Subtract()">
+                    </td>
+                    <td>
+                        <input type="button" value="Multiply" onclick="Multiply()">
+                    </td>
+                    <td>
+                        <input type="button" value="Divide" onclick="Divide()">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+
+    <script>
+        var refToNum1= document.getElementById("txtNum1");
+        //var dataInNum1= refToNum1.value;
+        var refToNum2= document.getElementById("txtNum2");
+        //var dataInNum2=refToNum2.value;
+        var refToResult= document.getElementById("ResultDiv");
+
+        function Add()
+        {
+        
+        var isNum1Number=validation("txtNum1","errorMessageNum1");
+        var isNum2Number=validation("txtNum2","errorMessageNum2");
+
+            if(isNum1Number==true && isNum2Number==true)
+            {
+                var Num1=parseInt(refToNum1.value);
+                var Num2=parseInt(refToNum2.value);
+                var result=Num1+Num2;
+                refToResult.innerText= result;
+            }
+            else
+            {
+                refToResult.innerText="";
+            }
+        }
+
+        function Subtract()
+        {
+        
+        var isNum1Number=validation("txtNum1","errorMessageNum1");
+        var isNum2Number=validation("txtNum2","errorMessageNum2");
+
+            if(isNum1Number==true && isNum2Number==true)
+            {
+                var Num1=parseInt(refToNum1.value);
+                var Num2=parseInt(refToNum2.value);
+                if(Num1>Num2)
+                {
+                    var result=Num1-Num2;
+                }
+                else
+                {
+                    var result=Num2-Num1;
+                }
+                refToResult.innerText= result;
+            }
+            else
+            {
+                refToResult.innerText="";
+            }
+        }
+
+        function Multiply()
+        {
+            var isNum1Number=validation("txtNum1","errorMessageNum1");
+            var isNum2Number=validation("txtNum2","errorMessageNum2");
+
+            if(isNum1Number==true && isNum2Number==true)
+            {
+                var Num1=parseInt(refToNum1.value);
+                var Num2=parseInt(refToNum2.value);
+                var result=Num1*Num2;
+                refToResult.innerText= result;
+            }
+            else
+            {
+                refToResult.innerText="";
+            }
+        }
+
+        function Divide()
+        {
+            var isNum1Number=validation("txtNum1","errorMessageNum1");
+            var isNum2Number=validation("txtNum2","errorMessageNum2");
+
+            if(isNum1Number==true && isNum2Number==true)
+            {
+                var Num1=parseInt(refToNum1.value);
+                var Num2=parseInt(refToNum2.value);
+                var result=Num1/Num2;
+                refToResult.innerText= result;
+            }
+            else
+            {
+                refToResult.innerText="";
+            }
+        }
+
+        function validation(id, errorId)
+        {
+            var refToNum= document.getElementById(id);
+            var dataInNum= refToNum.value;
+
+            var NumEmpty=isEmpty(id, errorId, "Num required");
+            if(NumEmpty==false){
+            var isNumNumber= isNumber(id, errorId, "Value is not a number");
+            }
+
+            return isNumNumber;
+        }
+
+        function isNumber(id, errorid, errorMessage)
+        {
+            var refToId=document.getElementById(id);
+            var data=refToId.value;
+            var error= document.getElementById(errorid);
+
+            var isitNumber=isNaN(data);
+            if(isitNumber==true)
+            {
+                error.innerText=errorMessage;
+                console.log(errorMessage);
+                isitNumber=false;
+            }
+            else
+            {
+                error.innerText="";
+                isitNumber=true;
+            }
+
+            return isitNumber;
+        }
+        
+        function isEmpty(id, errorid, errorMessage)
+        {
+            var refToId= document.getElementById(id);
+            var data=refToId.value;
+            var error= document.getElementById(errorid);
+            var IsItEmpty= true;
+            if(data != "")
+            {
+                error.innerText="";
+                IsItEmpty=false;
+            }
+            else
+            {
+                error.innerText=errorMessage;
+                console.log(errorMessage);
+                IsItEmpty=true;
+            }
+            return IsItEmpty;
+        }
+    </script>
+</body>
+</html>
