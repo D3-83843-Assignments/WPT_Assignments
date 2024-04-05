@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Superman</title>
+    <style>
+        img
+        {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            top: 110px;
+            left:-50px;
+        }
+        .road
+        {
+            background-color: black;
+            width: 650px;
+            height: 100px;
+            color: antiquewhite;
+            text-justify: center;
+            position: absolute;
+            top: 300px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="batman.gif" alt="goofy here!" id="image">
+        <div class="road"><h1> --  --  --  --  --  --  --  --  --  -- --  --  --  --  --  --  --   --  --  --  -- --</h1></div>
+    </div>
+    <div style="margin-top: 300px; width: 300px;">
+    X-axis:<input type="number" value="0" id="XAxis"><br><br>
+    Y-axis:<input type="number" value="0" id="YAxis">
+    </div>
+    <br>
+    <input type="button" value="Run!" onclick="start()" style="background-color: rgb(219, 111, 22); color: antiquewhite; font-size: larger;">
+    <input type="button" value="Stop!" onclick="stop()" style="background-color: rgb(219, 111, 22); color: antiquewhite;font-size: larger;">
+
+    <script>
+        var leftVal=0;
+        var topVal=100;
+        var refToImg= document.getElementById("image");
+        var refToXaxis= document.getElementById("XAxis");
+        var refToYaxis= document.getElementById("YAxis");
+        function move()
+        {   
+            if(leftVal<=530)
+            {
+                refToImg.style.left=leftVal+ "px";
+                leftVal=leftVal+10;
+            }
+            else if(leftVal<700)
+            {
+                refToImg.src="batman-windy.gif";
+                refToImg.style.width="200";
+                refToImg.style.height="200";
+                topVal= topVal-20;
+                leftVal=leftVal+20;
+                refToImg.style.left=leftVal+"px";
+                refToImg.style.top=topVal+"px";
+            }
+            else if(leftVal>=700 && leftVal<1000)
+            {
+                refToImg.src="batmanFly.jpeg";
+                refToImg.style.width="200";
+                refToImg.style.height="200";
+                topVal= topVal+20;
+                leftVal=leftVal+20;
+                refToImg.style.left=leftVal+"px";
+                refToImg.style.top=topVal+"px";
+            }
+            refToXaxis.value= leftVal;
+            refToYaxis.value=topVal;
+        }
+
+        var queue=0;
+        function start()
+        {
+            queue= window.setInterval(move,190);
+        }
+
+        function stop()
+        {
+            window.clearInterval(queue);
+        }
+
+    </script>
+</body>
+
+</html>
