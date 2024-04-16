@@ -1,0 +1,490 @@
+<html>
+<head>
+    <title>Shopping</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <style>
+        #Product
+        {
+            border: 1px solid rgba(190, 186, 186, 0.932);
+            border-radius: 10px;
+        }
+        img
+        {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand"><img src="logo.png" alt="logo" style="height: 50px; width: 70px;"></a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <div>
+            <button type="button" class="btn btn-outline-dark">Sign in 👤</button>
+            <button type="button" class="btn btn-outline-dark">Wishlist 🖤</button>
+            <button type="button" class="btn btn-outline-dark">My Cart 🛒</button>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar bg-primary" data-bs-theme="dark">
+        <div style="color: beige;">
+            <h1>Men's Wear</h1>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Library</li>
+                  <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+              </nav>
+        </div>
+      </nav>
+      <br><br><br>
+      
+    <div class="container-fluid">
+          <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2">
+              <button type="button" class="btn btn-light">Best match </button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Related items
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Electronics <br>
+                            Home Items <br>
+                            Books, Magazines<br>
+                            Men's clothing<br>
+                            Interior <br>
+                            Underwears<br>
+                            Shoes for men<br>
+                            Accessories<br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Brands
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Mercedes
+                                </label>
+                                <span class="badge rounded-pill text-bg-secondary">120</span>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Toyota
+                                </label>
+                                <span class="badge rounded-pill text-bg-secondary">15</span>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Mitsubishi
+                                </label>
+                                <span class="badge rounded-pill text-bg-secondary">35</span>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                 Nissan
+                                </label>
+                                <span class="badge rounded-pill text-bg-secondary">89</span>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Honda
+                                </label>
+                                <span class="badge rounded-pill text-bg-secondary">30</span>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Suzuki
+                                </label>
+                                <span class="badge rounded-pill text-bg-secondary">30</span>
+                              </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Price
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <input type="range" class="form-range" id="customRange1">
+                            <div class="container text-center">
+                                <div class="row">
+                                    <div class="col-4">
+                                    Min <br> <input type="number" placeholder="$0" style="width: 80%;">
+                                    </div>
+                                    <div class="col-4">
+                                    Max <br><input type="number" placeholder="$1000" style="width: 80%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-light" style="width: 90%; border: 1px solid black;">Apply</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Size
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <div class="container overflow-hidden text-left">
+                                <div class="row gy-5">
+                                  <div class="col-6">
+                                    <div class="p-3" style="background-color: rgb(212, 210, 210);">XS</div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="p-3" style="background-color: rgb(212, 210, 210);">SM</div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="p-3" style="background-color: rgb(212, 210, 210);">LG</div>
+                                  </div>
+                                  <div class="col-6">
+                                    <div class="p-3" style="background-color: rgb(212, 210, 210);">XXL</div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Ratings
+                          </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    ⭐⭐⭐⭐⭐
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    ⭐⭐⭐⭐
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    ⭐⭐⭐
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    ⭐⭐
+                                </label>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                      </div>
+                </div>
+                <!-- List of itmes -->
+            <div class="col-9">
+              <div class="container text-center" id="Product">
+                  <div class="row">
+                  <div class="col">
+                      <img src="Bag.png" alt="Bag">
+                  </div>
+                  <div class="col">
+                      <p>
+                          <h5>Rucksack Backpack Jeans</h5><br>
+                          ⭐⭐⭐⭐⭐ 4.5 154 orders <br>
+                          Short description about the product goes here, for ex its features. Lorem ipsum dolor
+                          sit amet with hapti you enter into any new area of science, you almost lorem ipsum 
+                          is great text .
+                      </p>
+                  </div>
+                  <div class="col">
+                      <br>
+                      <h5>$34,50</h5>
+                      <h5 style="color: green;">Free shipping</h5><br>
+                      <button type="button" class="btn btn-primary">BUY THIS</button>
+                      <button type="button" class="btn btn-light">❤</button>
+                  </div>
+                  </div>
+              </div>
+          <br>
+
+              <div class="container text-center" id="Product">
+                  <div class="row">
+                  <div class="col">
+                      <img src="DenimShort.png" alt="denim">
+                  </div>
+                  <div class="col">
+                      <p>
+                          <h5>Men's DEnim Jeans Shorts</h5><br>
+                          ⭐⭐⭐☆☆ 3 73 orders <br>
+                          Short description about the product goes here, for ex its features. Lorem ipsum dolor
+                          sit amet with hapti you enter into any new area of science, you almost lorem ipsum 
+                          is great text .
+                      </p>
+                  </div>
+                  <div class="col">
+                      <br>
+                      <h5>$34,50</h5>
+                      <h5 style="color: orange;">Paid shipping</h5><br>
+                      <button type="button" class="btn btn-primary">BUY THIS</button>
+                      <button type="button" class="btn btn-light">❤</button>
+                  </div>
+                  </div>
+              </div>
+          <br>
+
+              <div class="container text-center" id="Product">
+                  <div class="row">
+                  <div class="col">
+                      <img src="Greytshirt.png" alt="tshirt">
+                  </div>
+                  <div class="col">
+                      <p>
+                          <h5>T-shirt for Men Blue Cotton Base</h5><br>
+                          ⭐⭐⭐⭐☆ 4 910 orders <br>
+                          Short description about the product goes here, for ex its features. Lorem ipsum dolor
+                          sit amet with hapti you enter into any new area of science, you almost lorem ipsum 
+                          is great text .
+                      </p>
+                  </div>
+                  <div class="col">
+                      <br>
+                      <h5>$99,50</h5>
+                      <h5 style="color: green;">Free shipping</h5><br>
+                      <button type="button" class="btn btn-primary">BUY THIS</button>
+                      <button type="button" class="btn btn-light">❤</button>
+                  </div>
+                  </div>
+              </div>
+  
+          <br>
+              <div class="container text-center" id="Product">
+                  <div class="row">
+                  <div class="col">
+                      <img src="yellowJacket.png" alt="yellowJacket">
+                  </div>
+                  <div class="col">
+                      <p>
+                          <h5>Winter Jacket for Men and Women</h5><br>
+                          ⭐⭐⭐⭐⭐ 4.5 154 orders <br>
+                          Short description about the product goes here, for ex its features. Lorem ipsum dolor
+                          sit amet with hapti you enter into any new area of science, you almost lorem ipsum 
+                          is great text .
+                      </p>
+                  </div>
+                  <div class="col">
+                      <br>
+                      <h5>$140</h5>
+                      <h5 style="color: green;">Free shipping</h5><br>
+                      <button type="button" class="btn btn-primary">BUY THIS</button>
+                      <button type="button" class="btn btn-light">❤</button>
+                  </div>
+                  </div>
+              </div>
+
+          <br>
+              <div class="container text-center" id="Product">
+                  <div class="row">
+                  <div class="col">
+                      <img src="BlueTshirt.png" alt="BlueTshirt">
+                  </div>
+                  <div class="col">
+                      <p>
+                          <h5>Tshirt for Men Blue Cotton Base</h5><br>
+                          ⭐⭐⭐⭐⭐ 4.5 154 orders <br>
+                          Short description about the product goes here, for ex its features. Lorem ipsum dolor
+                          sit amet with hapti you enter into any new area of science, you almost lorem ipsum 
+                          is great text .
+                      </p>
+                  </div>
+                  <div class="col">
+                      <br>
+                      <h5>$95,15</h5>
+                      <h5 style="color: green;">Free shipping</h5><br>
+                      <button type="button" class="btn btn-primary">BUY THIS</button>
+                      <button type="button" class="btn btn-light">❤</button>
+                  </div>
+                  </div>
+              </div>
+
+          <br>
+          </div>
+        </div>
+          
+    </div>
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+   
+    <!-- Section: Links  -->
+    <section class="" style="background-color: rgb(40, 132, 236); color: aliceblue;">
+        <br>
+        <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-9 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h2 class="text fw-bold mb-3">
+                MDB <br> 2023 Copyright: MDBootstrap.com
+            </h2>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Store
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">About us</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Find Store</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Categories</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Blogs</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              INFORMATION
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Help centre</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Money refund</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Shipping info</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Refunds</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+           <!-- Grid column -->
+           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              SUPPORT
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Help centre</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Documents</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Account restore</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">My orders</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-9 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">NEWSLETTER</h6>
+            <p>Stay in touch with latest updates about our products and offers</p>
+            <p>
+                <input type="email" placeholder="Email">
+                <button type="button" class="btn btn-outline-dark">Join</button>
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+
+      <hr>
+    <div style="display: flex;"> 
+      <div class="text-left p-4" style="background-color: rgb(40, 132, 236);">
+        <img src="visa.png" alt="payment.html" style="width: 30px; height: 30px;">
+        <img src="Rupay.png" alt="payment.html" style="width: 30px; height: 30px;">
+        <img src="mastercard.png" alt="payment.html" style="width: 30px; height: 30px;">
+        </div>
+
+        <div class="text-left p-3" style="background-color: rgb(40, 132, 236);">
+            <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-mdb-dropdown-init
+              data-mdb-ripple-init
+              aria-expanded="false"
+            >
+              English
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>        
+        </div>
+    </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+        <!-- Buttons trigger collapse -->
+    <a
+    class="btn btn-primary mb-3"
+    data-mdb-collapse-init
+    data-mdb-ripple-init
+    href="#collapseExample"
+    role="button"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+    >
+    Link with href
+    </a>
+    <button
+    class="btn btn-primary mb-3"
+    type="button"
+    data-mdb-collapse-init
+    data-mdb-ripple-init
+    data-mdb-target="#collapseExample"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+    >
+    Button with data-mdb-target
+    </button>
+
+    <!-- Collapsed content -->
+    <div class="collapse" id="collapseExample">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+    squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+    sapiente ea proident.
+</div>
+
+<script>
+    import { Collapse, Ripple, initMDB } from 'mdb-ui-kit';
+    initMDB({ Collapse, Ripple });
+</script>
+    </body>
+</html>
